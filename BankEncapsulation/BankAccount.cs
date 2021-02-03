@@ -6,14 +6,19 @@ namespace BankEncapsulation
 {
     public class BankAccount
     {
-        private readonly double _balance;
+        private double _balance;
 
         public void Deposit(double amount)
         {
-            Console.WriteLine("Simulating a deposit of {} to your account");
+            Console.WriteLine($"Simulating a deposit of {amount , 0:c} to your account");
+            _balance = amount;
         }
 
-      
+      public double GetBalance()
+        {
+
+            return _balance;
+        }
         }
     }
-}
+
